@@ -20,16 +20,28 @@ setTimeout(() => {
   observableString.set('name-q')
 }, 2000)
 
-var observableObj = observable.map({
+// var observableObj = observable.map({
+//   name: 'qy',
+//   age: 27
+// })
+
+// autorun(() => {
+//   console.log('observableObj>>', observableObj.get('name'))
+// })
+// setTimeout(() => {
+//   observableObj.set('name', 'name-q')
+// }, 3000)
+
+var observableObj = observable({
   name: 'qy',
   age: 27
 })
 
 autorun(() => {
-  console.log('observableObj>>', observableObj.get('name'))
+  console.log('observableObj>>', observableObj.name)
 })
 setTimeout(() => {
-  observableObj.set('name', 'name-q')
+  observableObj.name = 'name-q'
 }, 3000)
 
 function App() {
